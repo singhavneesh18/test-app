@@ -5,17 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import  {WarningComponent} from './warning/warning.component';
-import {AttributeWayComponent} from './attributeway/attributeway.component';
-import {ClassWayComponent } from './classway/classway.component';
+import { WarningComponent } from './warning/warning.component';
+import { AttributeWayComponent } from './attributeway/attributeway.component';
+import { ClassWayComponent } from './classway/classway.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { UsedirectivesComponent } from './usedirectives/usedirectives.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ServerComponent, ServersComponent, WarningComponent, AttributeWayComponent, ClassWayComponent, DatabindingComponent
+    AppComponent, ServerComponent, ServersComponent, 
+    WarningComponent, AttributeWayComponent, ClassWayComponent, 
+    DatabindingComponent, UsedirectivesComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

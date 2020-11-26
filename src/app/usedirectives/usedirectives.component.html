@@ -1,0 +1,16 @@
+<p>{{userdirectives}}</p>
+
+<button type="button" class="btn btn-danger" (click)= "togglePara($event)">Display Details</button>
+<p *ngIf= "showPara">This is secret paragrap which will toggle on click on button</p>
+<div>
+    Button Activity:
+    <ul *ngFor= "let timeStamp of displayButtonClickHistory; let i = index" class="list-group">
+        <li *ngIf="i>= 4; else transparentBack"
+            [ngStyle]= "{backgroundColor: 'blue'}"
+            [ngClass] = "white-class"
+            >
+            {{timeStamp}}</li>
+        <ng-template #transparentBack>{{timeStamp}}</ng-template>
+        <!-- <li [ngStyle]= "{backgroundColor: displayButtonClickHistory.length > 5 ? 'blue' : 'transparent'}">{{timeStamp}}</li> -->
+    </ul>
+</div>
